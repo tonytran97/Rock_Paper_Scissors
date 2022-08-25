@@ -2,7 +2,6 @@ cpuChoice = '';
 
 userChoice = '';
 score = parseInt($('#score').text());
-console.log(score);
 
 $('#rock').on('click', () => {
     const rock = 'rock';
@@ -43,22 +42,27 @@ function game() {
         console.log('+1');
         win = score + 1;
         $('#score').text(win);
+        $('#result').text('You win');
     } else if (userChoice == 'paper' && cpuChoice == 'rock') {
         console.log('+1');
         win = score + 1;
         $('#score').text(win);
+        $('#result').text('You win');
     } else if (userChoice == 'scissors' && cpuChoice == 'paper') {
         console.log('+1');
         win = score + 1;
         $('#score').text(win);
+        $('#result').text('You win');
     } else if (userChoice === cpuChoice) {
         console.log('0');
         tie = score;
+        $('#result').text('Tied');
         $('#score').text(tie);
     } else {
         console.log('-1');
         lose = score - 1;
         $('#score').text(lose);
+        $('#result').text('Lost');
     }
     score = parseInt($('#score').text());
 }
