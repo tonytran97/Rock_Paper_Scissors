@@ -5,3 +5,15 @@ body {
 .card {
     background: rgb(160, 158, 158);
 }
+
+.btn {
+    border-radius: 0%;
+    margin: 0.5rem 0;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.btn:active {
+    background-color: #2e2f69;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}

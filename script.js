@@ -42,17 +42,17 @@ function game() {
         console.log('+1');
         win = score + 1;
         $('#score').text(win);
-        $('#result').text('You win');
+        $('#result').text('Win');
     } else if (userChoice == 'paper' && cpuChoice == 'rock') {
         console.log('+1');
         win = score + 1;
         $('#score').text(win);
-        $('#result').text('You win');
+        $('#result').text('Win');
     } else if (userChoice == 'scissors' && cpuChoice == 'paper') {
         console.log('+1');
         win = score + 1;
         $('#score').text(win);
-        $('#result').text('You win');
+        $('#result').text('Win');
     } else if (userChoice === cpuChoice) {
         console.log('0');
         tie = score;
