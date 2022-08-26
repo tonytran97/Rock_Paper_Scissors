@@ -4,6 +4,11 @@ userChoice = '';
 score = parseInt($('#score').text());
 
 $('#rock').on('click', () => {
+    $('#user').text('');
+    rockDisplay = $(`<button id="rock" class="btn btn-secondary btn-lg">
+    <i class="fa-solid fa-hand-fist"></i>
+  </button>`);
+    $('#user').append(rockDisplay);
     const rock = 'rock';
     userChoice = rock;
     console.log(userChoice);
@@ -12,6 +17,11 @@ $('#rock').on('click', () => {
 });
 
 $('#paper').on('click', () => {
+    $('#user').text('');
+    paperDisplay = $(`<button id="paper" class="btn btn-secondary btn-lg">
+    <i class="fa-solid fa-hand"></i>
+  </button>`);
+    $('#user').append(paperDisplay);
     const paper = 'paper';
     userChoice = paper;
     console.log(userChoice);
@@ -20,6 +30,11 @@ $('#paper').on('click', () => {
 });
 
 $('#scissor').on('click', () => {
+    $('#user').text('');
+    scissorsDisplay = $(`<button id="scissor" class="btn btn-secondary btn-lg">
+    <i class="fa-solid fa-hand-scissors"></i>
+  </button>`);
+    $('#user').append(scissorsDisplay);
     const scissors = 'scissors'
     userChoice = scissors;
     console.log(userChoice);
@@ -29,12 +44,27 @@ $('#scissor').on('click', () => {
 
 // function that generates a random number and selects from the array above
 function cpuGenerate() {
+    $('#cpu').text('');
     // array of choices for the cpu to pick
     cpuArray = ['rock', 'paper', 'scissors'];
     cpuSelect = cpuArray[Math.floor(Math.random() * cpuArray.length)];
     cpuChoice = cpuSelect;
     console.log(cpuChoice);
-}
+    if (cpuChoice === 'rock') {
+        cpuGame = $(`<button id="rock" class="btn btn-secondary btn-lg">
+        <i class="fa-solid fa-hand-fist"></i>
+      </button>`)}
+      else if (cpuChoice === "paper") {
+        cpuGame = $(`<button id="paper" class="btn btn-secondary btn-lg">
+        <i class="fa-solid fa-hand"></i>
+      </button>`)}
+      else {
+       cpuGame = $(`<button id="scissor" class="btn btn-secondary btn-lg">
+    <i class="fa-solid fa-hand-scissors"></i>
+  </button>`)};
+  $('#cpu').append(cpuGame);
+    } 
+
 
 // function that compares the user's choice vs cpu's choice and tracks points
 function game() {
