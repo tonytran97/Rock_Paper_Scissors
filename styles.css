@@ -6,6 +6,11 @@ body {
     background: rgb(160, 158, 158);
 }
 
+p, div {
+    font-weight: bold;
+    font-size: large;
+}
+
 .btn {
     border-radius: 0%;
     margin: 0.5rem 0;
@@ -16,4 +21,14 @@ body {
     background-color: #2e2f69;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+
+#row {
+    display: flex;
+    justify-content: center;
+}
+
+#vs {
+    margin-top: 1.2rem;
+    padding: 0rem 1rem;
 }

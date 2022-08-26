@@ -1,5 +1,4 @@
 cpuChoice = '';
-
 userChoice = '';
 score = parseInt($('#score').text());
 
@@ -7,7 +6,7 @@ $('#rock').on('click', () => {
     $('#user').text('');
     rockDisplay = $(`<button id="rock" class="btn btn-secondary btn-lg">
     <i class="fa-solid fa-hand-fist"></i>
-  </button>`);
+  </button><p>user</p>`);
     $('#user').append(rockDisplay);
     const rock = 'rock';
     userChoice = rock;
@@ -20,7 +19,7 @@ $('#paper').on('click', () => {
     $('#user').text('');
     paperDisplay = $(`<button id="paper" class="btn btn-secondary btn-lg">
     <i class="fa-solid fa-hand"></i>
-  </button>`);
+  </button></button><p>user</p>`);
     $('#user').append(paperDisplay);
     const paper = 'paper';
     userChoice = paper;
@@ -33,7 +32,7 @@ $('#scissor').on('click', () => {
     $('#user').text('');
     scissorsDisplay = $(`<button id="scissor" class="btn btn-secondary btn-lg">
     <i class="fa-solid fa-hand-scissors"></i>
-  </button>`);
+  </button></button><p>user</p>`);
     $('#user').append(scissorsDisplay);
     const scissors = 'scissors'
     userChoice = scissors;
@@ -53,16 +52,17 @@ function cpuGenerate() {
     if (cpuChoice === 'rock') {
         cpuGame = $(`<button id="rock" class="btn btn-secondary btn-lg">
         <i class="fa-solid fa-hand-fist"></i>
-      </button>`)}
+      </button></button><p>cpu</p>`)}
       else if (cpuChoice === "paper") {
         cpuGame = $(`<button id="paper" class="btn btn-secondary btn-lg">
         <i class="fa-solid fa-hand"></i>
-      </button>`)}
+      </button></button><p>cpu</p>`)}
       else {
        cpuGame = $(`<button id="scissor" class="btn btn-secondary btn-lg">
     <i class="fa-solid fa-hand-scissors"></i>
-  </button>`)};
+  </button></button><p>cpu</p>`)};
   $('#cpu').append(cpuGame);
+  $('#vs').text('vs');
     } 
 
 
